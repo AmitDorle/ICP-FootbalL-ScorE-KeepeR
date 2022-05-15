@@ -4,9 +4,9 @@
 <head>
     <title>Score Keeper</title>
     <style>
-        body{
-    background-image: url('img/bg.jpg');
-}
+        body {
+            background-image: url('img/bg.jpg');
+        }
     </style>
     <link rel="stylesheet" href="css/style.css">
 
@@ -34,6 +34,12 @@
             document.getElementById('counterP').innerHTML = PortuScore;
         }
 
+        function scoreReset()
+        {
+            document.getElementById('counterI').innerHTML=0;
+            document.getElementById('counterP').innerHTML=0;
+        }
+
     </script>
 </head>
 
@@ -59,7 +65,9 @@
                 <button class="score-btn" onclick="increasePortuScore()">+</button>
             </div>
         </div>
-
+    </div>
+    <div class="reset-btn-container">
+        <button class="btn-reset" onclick="scoreReset()">Reset</button>
     </div>
 </body>
 

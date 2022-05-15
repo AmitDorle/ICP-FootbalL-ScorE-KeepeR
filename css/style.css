@@ -60,3 +60,16 @@
     background-color: rgb(53, 237, 53);
 
 }
+.reset-btn-container{
+    display: flex;
+    justify-content: center;
+}
+.btn-reset{
+    padding: 3px;
+    height: 30px;
+    width: 100px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+ }
