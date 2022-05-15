@@ -3,12 +3,63 @@
 
 <head>
     <title>Score Keeper</title>
+    <style>
+        body{
+    background-image: url('img/bg.jpg');
+}
+    </style>
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        let IndScore = 0;
+        let PortuScore = 0;
+
+        function increaseIndScore() {
+            IndScore++;
+            document.getElementById('counterI').innerHTML = IndScore;
+        }
+
+        function decreasePortuScore() {
+            PortuScore--;
+            document.getElementById('counterP').innerHTML = PortuScore;
+        }
+
+        function decreaseIndScore() {
+            IndScore--;
+            document.getElementById('counterI').innerHTML = IndScore;
+        }
+
+        function increasePortuScore() {
+            PortuScore++;
+            document.getElementById('counterP').innerHTML = PortuScore;
+        }
+
+    </script>
 </head>
 
 <body>
     <div class="title-container">
         <h2 class="title-heading">⚽Football Score Keeper⚽</h2>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h2 class="card-heading">Team-India</h2>
+            <p class="team-score" id="counterI">0</p>
+            <div class="btn-container">
+                <button class="score-btn" onclick="decreaseIndScore()">-</button>
+                <button class="score-btn" onclick="increaseIndScore()">+</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="card-heading">Team-Portugal</h2>
+            <p class="team-score" id="counterP">0</p>
+            <div class="btn-container">
+                <button class="score-btn" onclick="decreasePortuScore()">-</button>
+                <button class="score-btn" onclick="increasePortuScore()">+</button>
+            </div>
+        </div>
+
     </div>
 </body>
 
